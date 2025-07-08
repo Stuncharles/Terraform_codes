@@ -1,0 +1,25 @@
+module "multi_az_vpc" {
+  source  = "nagarajurahul/multi-az-vpc/aws"
+  version = "1.0.2"
+
+  # Specify the AWS region for the VPC deployment
+  region  = "us-east-1"
+
+  # VPC CIDR block
+  vpc_cidr = "10.0.0.0/16"
+
+  # VPC Name (for tagging purposes)
+  vpc_name = "my-multi-az-vpc"
+
+  # Enable or disable NAT Gateway (optional)
+  enable_nat_gateway = true
+
+  # Number of devices per subnet (used to calculate subnet sizes)
+  number_of_devices_per_subnet = 700
+
+  # Enable IPv6 support (default is false)
+  enable_ipv6 = true
+
+  # Tags for resource identification and organization
+  tags = { "Project" = "CloudInfra" }
+}
