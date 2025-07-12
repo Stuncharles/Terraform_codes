@@ -1,0 +1,14 @@
+#command to execute terraform terminal
+
+
+1. aws configure
+
+2. terraform fmt
+
+3. terraform init
+
+4. terraform validate
+
+5. terraform plan
+
+6. terraform apply
